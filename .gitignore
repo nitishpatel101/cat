@@ -1,0 +1,9 @@
+# Large originals and secrets
+image-sources
+video-sources
+.vercel
+.env.local
+node_modules
+dist
+.DS_Store
+Thumbs.db
