@@ -141,7 +141,7 @@ const NUTRITION = [
   { label: 'Moisture', minMax: 'max', val: '9%' }
 ]
 
-const BASE = import.meta.env.BASE_URL
+const BASE = (import.meta as any).env?.BASE_URL || '/cat/'
 
 export default function App() {
   const [bagCount, setBagCount] = useState(0)
