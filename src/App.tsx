@@ -109,7 +109,7 @@ const CAT_MANIFEST: CatManifest = {
 }
 
 const PRODUCT_INFO = {
-  name: 'Mochi Crunch',
+  name: 'Nitish Crunch',
   flavour: 'Salmon & Chicken',
   bagGrams: 1500,
   price: 24.99,
@@ -173,7 +173,7 @@ export default function App() {
   // Add to bag function
   const handleAddToBag = (e: React.MouseEvent<HTMLButtonElement>) => {
     setBagCount((prev) => prev + quantity)
-    setToastMessage(`Added ${quantity} × Mochi Crunch (1.5 kg) to your bag`)
+    setToastMessage(`Added ${quantity} × Nitish Crunch (1.5 kg) to your bag`)
     setTimeout(() => setToastMessage(null), 3500)
 
     // Kibble burst animation
@@ -306,7 +306,7 @@ export default function App() {
       {/* Top Header */}
       <header className="fixed top-0 inset-x-0 z-30 flex items-center justify-between px-6 py-4 md:px-12 backdrop-blur-sm bg-white/10">
         <a href="#" className="font-bold text-[32px] lowercase tracking-tight text-white drop-shadow-md">
-          mochi
+          nitish
         </a>
         <nav className="hidden md:flex items-center gap-8 text-[17px] font-semibold text-white/90">
           <a href="#product" className="hover:text-white transition-colors">The bag</a>
@@ -333,7 +333,7 @@ export default function App() {
         <div ref={heroStageRef} className="hero-stage">
           <img
             src={`${BASE}cat/bg.jpg`}
-            alt="Mochi hero cat background"
+            alt="Nitish hero cat background"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <canvas
@@ -363,7 +363,7 @@ export default function App() {
               }}
               className="rounded-full bg-white px-8 py-3.5 text-[17px] font-bold text-plum shadow-xl hover:bg-blush hover:scale-105 active:scale-95 transition-all"
             >
-              Shop Mochi Crunch
+              Shop Nitish Crunch
             </button>
           </div>
         </div>
@@ -669,7 +669,7 @@ export default function App() {
             <div className="overflow-hidden rounded-[36px] shadow-2xl aspect-[3/2] bg-white">
               <img
                 src={`${BASE}images/cat-bowl.webp`}
-                alt="Fluffy cat eating Mochi Crunch from a bowl"
+                alt="Fluffy cat eating Nitish Crunch from a bowl"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -679,7 +679,7 @@ export default function App() {
           <div className="relative mt-24 overflow-hidden rounded-[40px] bg-pink p-8 sm:p-14 text-white shadow-2xl">
             <div className="relative z-10 max-w-[620px]">
               <h3 className="display text-[40px] sm:text-[60px] text-white leading-tight">
-                Mochi is waiting by the bowl.
+                Nitish is waiting by the bowl.
               </h3>
               <p className="mt-3 text-[19px] text-white/90">
                 Salmon & Chicken Crunch · 1.5 kg resealable bag · Free delivery from $40
@@ -691,7 +691,7 @@ export default function App() {
                   onClick={handleAddToBag}
                   className="rounded-full bg-white px-8 py-4 text-[18px] font-bold text-plum shadow-xl hover:bg-blush hover:scale-105 active:scale-95 transition-all"
                 >
-                  Add Mochi Crunch to bag
+                  Add Nitish Crunch to bag
                 </button>
               </div>
             </div>
@@ -699,7 +699,7 @@ export default function App() {
             {/* Overlapping tilted pouch packshot */}
             <img
               src={`${BASE}images/pouch.webp`}
-              alt="Mochi Crunch pouch"
+              alt="Nitish Crunch pouch"
               className="absolute -right-10 -bottom-10 h-72 sm:h-96 w-auto rotate-[8deg] drop-shadow-[0_30px_40px_rgba(58,11,34,0.45)] pointer-events-none"
             />
           </div>
@@ -720,11 +720,11 @@ export default function App() {
           </div>
 
           <div className="display text-[30vw] leading-none text-white/20 select-none lowercase mt-12">
-            mochi
+            nitish
           </div>
 
           <div className="mt-6 text-[14px] text-white/60">
-            © 2026 Mochi Cat Food. All rights reserved.
+            © 2026 Nitish Cat Food. All rights reserved.
           </div>
         </div>
       </footer>
