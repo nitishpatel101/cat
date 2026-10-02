@@ -141,6 +141,8 @@ const NUTRITION = [
   { label: 'Moisture', minMax: 'max', val: '9%' }
 ]
 
+const BASE = import.meta.env.BASE_URL
+
 export default function App() {
   const [bagCount, setBagCount] = useState(0)
   const [purchaseType, setPurchaseType] = useState<'sub' | 'once'>('sub')
@@ -179,7 +181,7 @@ export default function App() {
     const x = rect.left + rect.width / 2
     const y = rect.top + rect.height / 2
 
-    const kibbleSrcs = ['/images/kibble-one.webp', '/images/kibble-two.webp', '/images/kibble-three.webp']
+    const kibbleSrcs = [`${BASE}images/kibble-one.webp`, `${BASE}images/kibble-two.webp`, `${BASE}images/kibble-three.webp`]
     for (let i = 0; i < 12; i++) {
       const img = document.createElement('img')
       img.src = kibbleSrcs[i % kibbleSrcs.length]
@@ -236,7 +238,7 @@ export default function App() {
         }
         const img = new Image()
         const fNum = String(CAT_MANIFEST.frames[idx].i).padStart(3, '0')
-        img.src = `/cat/f${fNum}.webp`
+        img.src = `${BASE}cat/f${fNum}.webp`
         img.onload = () => {
           images[idx] = img
           resolve(img)
@@ -330,7 +332,7 @@ export default function App() {
         {/* Full-bleed cat background and tracking canvas */}
         <div ref={heroStageRef} className="hero-stage">
           <img
-            src="/cat/bg.jpg"
+            src={`${BASE}cat/bg.jpg`}
             alt="Mochi hero cat background"
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -374,16 +376,16 @@ export default function App() {
           <div className="relative">
             {/* Floating kibble background items */}
             <div className="absolute -inset-[12%] pointer-events-none overflow-visible">
-              <img src="/images/kibble-one.webp" alt="" className="absolute top-[8%] left-[6%] w-14 animate-pulse opacity-90" />
-              <img src="/images/kibble-two.webp" alt="" className="absolute bottom-[10%] right-[8%] w-16 opacity-80" />
-              <img src="/images/kibble-three.webp" alt="" className="absolute top-[40%] -left-8 w-12 opacity-85" />
-              <img src="/images/kibble-one.webp" alt="" className="absolute top-[75%] left-[20%] w-10 opacity-70" />
+              <img src={`${BASE}images/kibble-one.webp`} alt="" className="absolute top-[8%] left-[6%] w-14 animate-pulse opacity-90" />
+              <img src={`${BASE}images/kibble-two.webp`} alt="" className="absolute bottom-[10%] right-[8%] w-16 opacity-80" />
+              <img src={`${BASE}images/kibble-three.webp`} alt="" className="absolute top-[40%] -left-8 w-12 opacity-85" />
+              <img src={`${BASE}images/kibble-one.webp`} alt="" className="absolute top-[75%] left-[20%] w-10 opacity-70" />
             </div>
 
             <div className="relative z-[5] overflow-hidden rounded-[40px] aspect-[4/5] bg-pink shadow-2xl">
               <video
-                src="/videos/kitten-hug.mp4"
-                poster="/images/kitten-hug.webp"
+                src={`${BASE}videos/kitten-hug.mp4`}
+                poster={`${BASE}images/kitten-hug.webp`}
                 autoPlay
                 loop
                 muted
@@ -536,8 +538,8 @@ export default function App() {
             {/* Centre floating bag video */}
             <div className="relative mx-auto w-full max-w-[420px] aspect-[3/4] rounded-[40px] overflow-hidden shadow-2xl">
               <video
-                src="/videos/pouch-float.mp4"
-                poster="/images/pouch-float.webp"
+                src={`${BASE}videos/pouch-float.mp4`}
+                poster={`${BASE}images/pouch-float.webp`}
                 autoPlay
                 loop
                 muted
@@ -666,7 +668,7 @@ export default function App() {
             {/* Cat bowl photograph */}
             <div className="overflow-hidden rounded-[36px] shadow-2xl aspect-[3/2] bg-white">
               <img
-                src="/images/cat-bowl.webp"
+                src={`${BASE}images/cat-bowl.webp`}
                 alt="Fluffy cat eating Mochi Crunch from a bowl"
                 className="h-full w-full object-cover"
               />
@@ -696,7 +698,7 @@ export default function App() {
 
             {/* Overlapping tilted pouch packshot */}
             <img
-              src="/images/pouch.webp"
+              src={`${BASE}images/pouch.webp`}
               alt="Mochi Crunch pouch"
               className="absolute -right-10 -bottom-10 h-72 sm:h-96 w-auto rotate-[8deg] drop-shadow-[0_30px_40px_rgba(58,11,34,0.45)] pointer-events-none"
             />
